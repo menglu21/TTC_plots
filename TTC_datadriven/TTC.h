@@ -106,7 +106,7 @@ float fakelepweight_em_data(bool ttc_1P1F, bool ttc_0P2F, bool ttc_lep1_faketag,
                 BinY = h_e->GetYaxis()->FindBin(l2_pt);
                 if (BinX > h_e.GetNbinsX()) BinX = h_e.GetNbinsX();
                 if (BinY > h_e.GetNbinsY()) BinY = h_e.GetNbinsY();
-                fakerate1=h_m->GetBinContent(BinX, BinY);
+                fakerate1=h_e->GetBinContent(BinX, BinY);
             }
             w_temp=fakerate1/(1-fakerate1);
         }
@@ -229,7 +229,7 @@ float fakelepweight_em_mc(bool ttc_1P1F, bool ttc_0P2F, bool ttc_lep1_faketag, f
                 BinY = h_e->GetYaxis()->FindBin(l2_pt);
                 if (BinX > h_e.GetNbinsX()) BinX = h_e.GetNbinsX();
                 if (BinY > h_e.GetNbinsY()) BinY = h_e.GetNbinsY();
-                fakerate1=h_m->GetBinContent(BinX, BinY);
+                fakerate1=h_e->GetBinContent(BinX, BinY);
             }
             w_temp=-1*fakerate1/(1-fakerate1);
         }
